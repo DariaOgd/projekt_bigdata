@@ -12,7 +12,7 @@ def wczytaj_stopwords(plik):
         with open(plik, encoding='utf-8') as f:
             return set(line.strip() for line in f if line.strip())
     except FileNotFoundError:
-        print(f"❌ Nie znaleziono pliku: {plik}")
+        print(f"Nie znaleziono pliku: {plik}")
         return set()
 
 class PolitykaScraperConsole:
@@ -58,7 +58,7 @@ class PolitykaScraperConsole:
         return Counter(word for word in words if word not in self.stopwords)
 
     def pokaz_wordcount(self, counter, ile=20):
-        print("\n📊 Najczęstsze słowa:")
+        print("\nNajczęstsze słowa:")
         for word, count in counter.most_common(ile):
             print(f"{word:<20} {count}")
 
