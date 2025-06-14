@@ -49,7 +49,7 @@ class PolitykaScraperConsole:
             url = f"{self.base_url}{i}"
             html = self.pobierz_html(url)
             self.ekstrakcja_tytulow(html)
-        print(f"✅ Zebrano {len(self.tytuly)} tytułów.\n")
+        print(f"Zebrano {len(self.tytuly)} tytułów.\n")
 
     def policz_slowa(self):
         text = " ".join(self.tytuly).lower()
@@ -106,7 +106,7 @@ def wypisz_wspolne_i_unikalne(c1, c2, c3, labels=["Portal1", "Portal2", "Portal3
     tylko2 = s2 - s1 - s3
     tylko3 = s3 - s1 - s2
 
-    print(f"\n🔗 Wspólne słowa ({labels[0]}, {labels[1]}, {labels[2]}):")
+    print(f"\nWspólne słowa ({labels[0]}, {labels[1]}, {labels[2]}):")
     for w in sorted(wspolne):
         print("-", w)
 def rysuj_bigramy(scraper, top_n=20, tytul="Top bigramy"):
