@@ -19,8 +19,8 @@ class PolitykaScraperConsole:
     def __init__(self, liczba_stron=5, plik_stopwordow="stop_words_polish.txt",
                  base_url="", selektor_tytulu=""):
         self.headers = {
-            "User-Agent": "Mozilla/5.0",
-            "Accept-Language": "pl-PL,pl;q=0.9"
+            "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+            "Accept-Language" : "pl-PL,pl;q=0.9" 
         }
         self.base_url = base_url
         self.selektor_tytulu = selektor_tytulu
